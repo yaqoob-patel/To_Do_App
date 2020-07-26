@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="heading" ></div>
+    <div id="inpSubBtn" style="margin-top: 20px;">
+      <input
+       maxlength="15"
+        type="text"
+        id="inputText"
+        placeholder="work to be done......"
+        style="
+          border-radius: 4px;
+          border: 3px solid black;
+          font-size: 2rem;
+          font-style: italic;
+          width: 50rem;
+          height: 2rem;
+          background-color: rgb(255, 0, 0);
+          color: white;
+        "
+      />
+      <button
+        id="btnsubmitt"
+        value="submit"
+        type="submit"
+        onclick="collectInputText()"
+        style="
+          border: 2px solid red;
+          border-radius: 5px;
+          background-color: black;
+          color: cornsilk;
+          /* height: 1.5rem; */
+          margin-left: 10px;
+        "
+      >
+        A D D T O D O
+      </button>
+    </div>
+    <div id="listDiv" style="text-align: justify;;">
+      <ul id="list" >
+      
+      </ul>
+    </div>
+    <button onclick="clearAllList()" style="
+          border: 2px solid red;
+          border-radius: 5px;
+          background-color: black;
+          color: cornsilk;
+          /* height: 1.5rem; */
+          margin-left: 10px;
+        ">All Clear</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  text-align: auto 0;
+  background-color: lightblue;
+}
+
+#heading {
+  margin-top: 200px;
+  padding-bottom: 20px;
+}
+
+#list {
+  list-style: none;
+  align-items: center;
+}
+
+li {
+  background-color: red;
+  color: antiquewhite;
+}
+#delBtn1 {
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+#editBtn1Id {
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+#inputText {
+  /* max-lines: 1; */
+  /* size: "15"; */
+}
