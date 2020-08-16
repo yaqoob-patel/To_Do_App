@@ -21,13 +21,12 @@ firebase
   .on("child_added", function (data) {
     // console.log(data.val());
     if (
-      document.getElementById("inputText").value === "work to be done......" ||
-      document.getElementById("inputText").value === "" ||
-      document.getElementById("inputText").value ===
-        "please Enter todo again" ||
-      document.getElementById("inputText").value === "sorry nothing to delete"
+      document.getElementById("inputText").value == "work to be done......" ||
+      document.getElementById("inputText").value == "" ||
+      document.getElementById("inputText").value == "please Enter again" ||
+      document.getElementById("inputText").value == "sorry nothing to delete"
     ) {
-      console.log("yaqoob");
+      // console.log("yaqoob");
       document.getElementById("inputText").value = "please Enter again";
     } else {
       var li = document.createElement("li");
@@ -87,15 +86,23 @@ firebase
 function collectInputText() {
   var text = document.getElementById("inputText").value;
 
-  var key = firebase.database().ref("todos").push().key;
-  // console.log(key);
+  if (
+    text === "work to be done......" ||
+    text === "" ||
+    text === "please Enter todo again" ||
+    text === "sorry nothing to delete"
+  ) {
+    document.getElementById("inputText").value = "Please enter work ToDo";
+  } else {
+    var key = firebase.database().ref("todos").push().key;
+    // console.log(key);
 
-  var workToDo = {
-    work: text,
-    key: key,
-  };
-  firebase.database().ref("todos").child(key).set(workToDo);
-
+    var workToDo = {
+      work: text,
+      key: key,
+    };
+    firebase.database().ref("todos").child(key).set(workToDo);
+  }
   // if (
   //   text !== "work to be done......" &&
   //   text !== "" &&
