@@ -5,7 +5,7 @@ body {
 }
 
 #heading {
-  margin-top: 200px;
+  margin-top: 150px;
   padding-bottom: 20px;
 }
 
@@ -31,4 +31,12 @@ li {
 #inputText {
   /* max-lines: 1; */
   /* size: "15"; */
+}
+.btn {
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: black;
+  color: cornsilk;
+  /* height: 1.5rem; */
+  margin-left: 10px;
 }

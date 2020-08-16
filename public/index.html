@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To Do App</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRvi6CQldnxdRKQKRRpfAaLw8NPIbtzfs",
+        authDomain: "to-do-app-e8773.firebaseapp.com",
+        databaseURL: "https://to-do-app-e8773.firebaseio.com",
+        projectId: "to-do-app-e8773",
+        storageBucket: "to-do-app-e8773.appspot.com",
+        messagingSenderId: "289909698168",
+        appId: "1:289909698168:web:917da427306e3c00dec78d"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
   </head>
   <body>
     <div id="heading" ></div>
@@ -47,23 +67,18 @@
       
       </ul>
     </div>
-    <button onclick="clearAllList()" style="
-          border: 2px solid red;
-          border-radius: 5px;
-          background-color: black;
-          color: cornsilk;
-          /* height: 1.5rem; */
-          margin-left: 10px;
-        ">All Clear</button>
+    <button class="btn" onclick="clearAllList()" 
+   
+        >All Clear</button>
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script> -->
     
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     
     <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <!-- <script src="/__/firebase/init.js"></script> -->
   </body>
   <script src="app.js"></script>
 </html>
